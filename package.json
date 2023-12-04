@@ -7,15 +7,26 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@sxzz/eslint-config": "^3.7.5",
     "@sxzz/prettier-config": "^2.0.0",
+    "@unocss/nuxt": "^0.58.0",
+    "@unocss/preset-rem-to-px": "^0.58.0",
+    "@unocss/preset-typography": "^0.58.0",
+    "@unocss/transformer-compile-class": "^0.58.0",
+    "@unocss/transformer-directives": "^0.58.0",
+    "@unocss/transformer-variant-group": "^0.58.0",
     "nuxt": "^3.8.2",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.58.0"
   },
   "prettier": "@sxzz/prettier-config"
 }

@@ -1,9 +1,11 @@
-import { sxzz } from '@sxzz/eslint-config'
+import { sxzz, GLOB_TSX, GLOB_TSX } from '@sxzz/eslint-config'
 
 export default sxzz(
   {
+    files: [GLOB_TSX, GLOB_TSX],
     rules: {
-      'no-console': 'warn',
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/await-thenable': 'error',
     },
   },
   {

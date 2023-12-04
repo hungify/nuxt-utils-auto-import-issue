@@ -62,7 +62,7 @@ function sayHello(from: 'workers' | 'composable') {
 </script>
 
 <template>
-  <h1>Demo with auto imports</h1>
+  <h1>Demo Utils folder is not auto imported on production mode when using in worker file</h1>
   <CustomInput v-model="message" />
   <button type="submit" @click="sayHello('composable')">
     Hello from composable
@@ -86,6 +86,10 @@ On production mode, we have this error:
 Uncaught ReferenceError: upperCase is not defined
     at index-8e797b43.js:1:88
 ```
+
+It just happens when I use the utils function inside the worker file otherwise it works fine.
+
+But if I use outside the worker file, it works fine.
 
 ## Note
 
